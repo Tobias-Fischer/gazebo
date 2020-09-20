@@ -384,6 +384,7 @@ if (PKG_CONFIG_FOUND)
     list(APPEND OGRE_LIBRARIES ${OGRE_Terrain_LIBRARIES})
     list(APPEND OGRE_LIBRARIES ${OGRE_Overlay_LIBRARIES})
     list(APPEND OGRE_LIBRARIES ${OGRE_Paging_LIBRARIES})
+    set(OGRE_LINK_LIBRARIES OGRE_LIBRARIES)
     # Workaround for https://github.com/OGRECave/ogre/issues/1499
     # On Ogre < 1.13, the definition of OGRE_PLUGIN_DIR in the OGRE CMake
     # configuration file on Windows is wrong. To avoid problem, on Windows
