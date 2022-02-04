@@ -18,8 +18,6 @@
 #ifndef GAZEBO_TRANSPORT_NODE_HH_
 #define GAZEBO_TRANSPORT_NODE_HH_
 
-#include <tbb/task.h>
-
 // This fixes compiler warnings, see #3147 and #3160
 #ifndef BOOST_BIND_GLOBAL_PLACEHOLDERS
 #define BOOST_BIND_GLOBAL_PLACEHOLDERS
@@ -31,6 +29,7 @@
 #include <string>
 #include <vector>
 
+#include "gazebo/transport/TaskGroup.hh"
 #include "gazebo/transport/TransportTypes.hh"
 #include "gazebo/transport/TopicManager.hh"
 #include "gazebo/util/system.hh"
