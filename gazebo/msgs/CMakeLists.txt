@@ -156,6 +156,11 @@ if (NOT MSVC)
   endif()
 endif()
 
+if(APPLE)
+    add_custom_command(gazebomsgs_out POST_BUILD COMMAND codesign -s $<TARGET_FILE:gazebomsgs_out>)
+
+endif()
+
 set (sources msgs.cc MsgFactory.cc)
 set (headers msgs.hh MsgFactory.hh)
 
